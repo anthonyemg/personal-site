@@ -7,19 +7,22 @@ import {
   Redirect,
   withRouter,
 } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Main from './Main.jsx';
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Route exact path="/" render={() => (
-            <Main />
-          )}/>
-        </div>
-      </Router>
+      <MuiThemeProvider>
+        <Router>
+          <div>
+            <Route exact path="/" render={() => (
+              <Main />
+            )}/>
+          </div>
+        </Router>
+      </MuiThemeProvider>
     );
   }
 }

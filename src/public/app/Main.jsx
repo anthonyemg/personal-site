@@ -1,4 +1,6 @@
 import React from 'react';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 
 class Main extends React.Component {
   constructor(props) {
@@ -11,7 +13,11 @@ class Main extends React.Component {
   render() {
     return (
       <div className="Main">
-        <h1>{this.state.content}</h1>
+        <Card>
+          <CardHeader
+            title= {this.state.content}
+          />
+        </Card>
       </div>
     )
   }
