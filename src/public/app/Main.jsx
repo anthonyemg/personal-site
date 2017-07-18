@@ -1,19 +1,24 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import AppBar from 'material-ui/AppBar';
+import { Card, CardHeader } from 'material-ui/Card';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 class Main extends React.Component {
   constructor(props) {
+    injectTapEventPlugin();
     super(props);
     this.state = {
       content: 'Hello World..',
     }
   }
 
+  // injectTapEventPlugin();
+
   render() {
     return (
       <div className="Main">
         <Card>
+          <AppBar />
           <CardHeader
             title= {this.state.content}
           />
