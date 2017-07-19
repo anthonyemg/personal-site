@@ -8,7 +8,7 @@ import {
   withRouter,
 } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import anthonysTheme from 'material-ui/styles/baseThemes/anthonysTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Main from './Main.jsx';
@@ -16,7 +16,7 @@ import Main from './Main.jsx';
 class App extends React.Component {
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+      <MuiThemeProvider muiTheme={getMuiTheme(anthonysTheme)}>
         <Router>
           <div>
             <Route exact path="/" render={() => (
