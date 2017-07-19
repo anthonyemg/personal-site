@@ -7,19 +7,40 @@ class Main extends React.Component {
     injectTapEventPlugin();
     super(props);
     this.state = {
-      content: 'Hello World..',
-    }
+      content: 'hello world..',
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
+    };
+    this.handleResize = this.handleResize.bind(this);
   }
 
-  // injectTapEventPlugin();
+  handleResize() {
+    this.setState({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
+    });
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
 
   render() {
     return (
-      <div className="Main">
-        <Card>
-
+      <div >
+        <Card
+          className = "Main"
+          style = {{
+            height: this.state.windowHeight,
+            width: this.state.windowWidth
+          }}
+        >
           <CardHeader
-            title= {this.state.content}
+            title = {this.state.content}
           />
         </Card>
       </div>

@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
 }
 .Main {
   color: #3E3D3D;
