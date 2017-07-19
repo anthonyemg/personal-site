@@ -8,6 +8,7 @@ import Face from 'material-ui/svg-icons/action/face';
 import Work from 'material-ui/svg-icons/action/work';
 import PhotoCamera from 'material-ui/svg-icons/image/photo-camera';
 
+import Photos from './Photos.jsx';
 
 class Main extends React.Component {
   constructor(props) {
@@ -73,13 +74,13 @@ class Main extends React.Component {
             onChangeIndex={this.handleChange}
           >
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
-              tab 1
+              Hi I'm Anthony
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
-              tab 2
+              Front-end Developer
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
-              tab 3
+              <Photos windowWidth={this.state.windowWidth} />
             </div>
           </SwipeableViews>
         </div>

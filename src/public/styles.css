@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+  font-family: 'Electrolize', sans-serif;
 }
 
 .Main {
@@ -24,5 +25,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 0px;
 }
