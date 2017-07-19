@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardHeader } from 'material-ui/Card';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import CircularProgress from 'material-ui/CircularProgress';
 
 class Main extends React.Component {
   constructor(props) {
@@ -8,44 +9,47 @@ class Main extends React.Component {
     super(props);
     this.state = {
       content: 'hello world..',
-      windowHeight: (window.innerHeight / 10) * 8,
-      windowWidth: (window.innerWidth / 10) * 8
+      loading: true,
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
     };
     this.handleResize = this.handleResize.bind(this);
+    this.handleLoading = this.handleLoading.bind(this);
   }
 
   handleResize() {
     this.setState({
-      windowHeight: (window.innerHeight / 10) * 8,
-      windowWidth: (window.innerWidth / 10) * 8
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
     });
-    console.log('window width', window.innerWidth)
-    console.log('adjusted width', this.state.windowWeight)
+  }
+
+  handleLoading() {
+    this.setState({
+      loading: false
+    });
+  }
+
+  componentWillMount() {
+
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    this.handleLoading()
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
-    console.log('window width', window.innerWidth)
-    console.log('adjusted width', this.windowWidth)
   }
 
   render() {
     return (
       <div >
-        <div
-          className = "Main"
-          style = {{
-            height: this.state.windowHeight,
-            width: this.state.windowWidth
-          }}
-        >
-          {/* <CardHeader
-            title = {this.state.content}
-          /> */}
+        <div className="Progress" style={{ display: this.state.loading ? 'block' : 'none', left: (this.state.windowWidth / 2) - 40, top: (this.state.windowHeight / 2) - 40 }} >
+          <CircularProgress size={80} thickness={5} />
+        </div>
+        <div className="Main" style = {{ height: (this.state.windowHeight/10) * 8, width: (this.state.windowWidth/10) * 8 }} >
         </div>
       </div>
     )
