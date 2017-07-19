@@ -8,17 +8,19 @@ class Main extends React.Component {
     super(props);
     this.state = {
       content: 'hello world..',
-      windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth
+      windowHeight: (window.innerHeight / 10) * 8,
+      windowWidth: (window.innerWidth / 10) * 8
     };
     this.handleResize = this.handleResize.bind(this);
   }
 
   handleResize() {
     this.setState({
-      windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth
+      windowHeight: (window.innerHeight / 10) * 8,
+      windowWidth: (window.innerWidth / 10) * 8
     });
+    console.log('window width', window.innerWidth)
+    console.log('adjusted width', this.state.windowWeight)
   }
 
   componentDidMount() {
@@ -27,22 +29,24 @@ class Main extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+    console.log('window width', window.innerWidth)
+    console.log('adjusted width', this.windowWidth)
   }
 
   render() {
     return (
       <div >
-        <Card
+        <div
           className = "Main"
           style = {{
             height: this.state.windowHeight,
             width: this.state.windowWidth
           }}
         >
-          <CardHeader
+          {/* <CardHeader
             title = {this.state.content}
-          />
-        </Card>
+          /> */}
+        </div>
       </div>
     )
   }
