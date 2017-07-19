@@ -14,7 +14,9 @@ body {
 
 .Main {
   background-color: white;
-  border: 1px solid lightgrey;
+  /*border: 1px solid lightgrey;*/
+  position: relative;
+  top: -7px;
 }
 
 .Progress {

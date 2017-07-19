@@ -46,29 +46,30 @@ const tilesData = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkr66ZwMurMAFSt9qdHrTxuuRm38O08-Z6IBZrequ2TpPQnyX',
     title: 'Mornidng',
   },
-  {
-    img: 'http://ste.india.com/sites/default/files/2016/01/21/452974-monkey.jpg',
-    title: 'Morniddng',
-  },
+  // {
+  //   img: 'http://ste.india.com/sites/default/files/2016/01/21/452974-monkey.jpg',
+  //   title: 'Morniddng',
+  // },
 ];
 
 const Photos = (props) => (
   <div style={styles.root}>
     <GridList
-      cols={2}
+      cols={props.windowWidth < 600 ? 1 : 2}
       padding={10}
       style={{ overflowY: 'auto' }}
+      cellHeight={props.windowWidth < 600 ? 80 : 130}
     >
       {tilesData.map((tile) => (
         <GridTile
           key={tile.img}
-          title={tile.title}
+          // title={tile.title}
           actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
           actionPosition="left"
           titlePosition="top"
           titleBackground="linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
-          cols={tile.featured ? 2 : 1}
-          rows={tile.featured ? 2 : 1}
+          cols={props.windowWidth < 600 ? 2 : 1}
+          rows={props.windowWidth < 600 ? 3 : 2}
         >
           <img src={tile.img} />
         </GridTile>

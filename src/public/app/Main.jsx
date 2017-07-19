@@ -60,7 +60,7 @@ class Main extends React.Component {
         <div className="Progress" style={{ display: this.state.loading ? 'block' : 'none', left: (this.state.windowWidth / 2) - 40, top: (this.state.windowHeight / 2) - 40 }} >
           <CircularProgress size={80} thickness={5} />
         </div>
-        <div className="Main" style = {{ height: this.state.windowHeight * 0.8, width: this.state.windowWidth * 0.8 }} >
+        <div className="Main" style = {{ height: this.state.windowHeight * 0.8, width: this.state.windowWidth < 1000 ? this.state.windowWidth * 0.8 : 600 }} >
           <Tabs
             onChange={this.handleChange}
             value={this.state.slideIndex}
