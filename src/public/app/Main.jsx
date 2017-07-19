@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardHeader } from 'material-ui/Card';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import CircularProgress from 'material-ui/CircularProgress';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import SwipeableViews from 'react-swipeable-views';
 
 class Main extends React.Component {
   constructor(props) {
@@ -11,10 +13,12 @@ class Main extends React.Component {
       content: 'hello world..',
       loading: true,
       windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
+      slideIndex: 0,
     };
     this.handleResize = this.handleResize.bind(this);
     this.handleLoading = this.handleLoading.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleResize() {
@@ -30,8 +34,10 @@ class Main extends React.Component {
     });
   }
 
-  componentWillMount() {
-
+  handleChange(value) {
+    this.setState({
+      slideIndex: value,
+    });
   }
 
   componentDidMount() {
@@ -50,6 +56,28 @@ class Main extends React.Component {
           <CircularProgress size={80} thickness={5} />
         </div>
         <div className="Main" style = {{ height: (this.state.windowHeight/10) * 8, width: (this.state.windowWidth/10) * 8 }} >
+          <Tabs
+            onChange={this.handleChange}
+            value={this.state.slideIndex}
+          >
+            <Tab label="Tab 1" value={0} />
+            <Tab label="Tab 2" value={1} />
+            <Tab label="Tab 3" value={2} />
+          </Tabs>
+          <SwipeableViews
+            index={this.state.slideIndex}
+            onChangeIndex={this.handleChange}
+          >
+            <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
+              tab 1
+            </div>
+            <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
+              tab 2
+            </div>
+            <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
+              tab 3
+            </div>
+          </SwipeableViews>
         </div>
       </div>
     )

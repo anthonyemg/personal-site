@@ -19,3 +19,10 @@ body {
 .Progress {
   position: absolute;
 }
+
+.Tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
