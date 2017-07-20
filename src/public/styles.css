@@ -12,6 +12,10 @@ body {
   font-family: 'Electrolize', sans-serif;
 }
 
+.Progress {
+  position: absolute;
+}
+
 .Main {
   background-color: white;
   /*border: 1px solid lightgrey;*/
@@ -19,8 +23,23 @@ body {
   top: -7px;
 }
 
-.Progress {
-  position: absolute;
+.Me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.Skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .Tab {
@@ -28,12 +47,4 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-}
-
-.Me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }

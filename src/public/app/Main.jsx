@@ -8,8 +8,10 @@ import Face from 'material-ui/svg-icons/action/face';
 import Work from 'material-ui/svg-icons/action/work';
 import PhotoCamera from 'material-ui/svg-icons/image/photo-camera';
 
-import Photos from './Photos.jsx';
 import Me from './Me.jsx';
+import Skills from './Skills.jsx';
+import Photos from './Photos.jsx';
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -78,7 +80,7 @@ class Main extends React.Component {
               <Me />
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
-              Front-end Developer
+              <Skills />
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
               <Photos windowWidth={this.state.windowWidth} />
