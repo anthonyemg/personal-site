@@ -29,3 +29,11 @@ body {
   align-items: flex-start;
   padding: 0px;
 }
+
+.Me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

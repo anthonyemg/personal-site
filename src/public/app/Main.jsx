@@ -9,6 +9,7 @@ import Work from 'material-ui/svg-icons/action/work';
 import PhotoCamera from 'material-ui/svg-icons/image/photo-camera';
 
 import Photos from './Photos.jsx';
+import Me from './Me.jsx';
 
 class Main extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class Main extends React.Component {
         <div className="Progress" style={{ display: this.state.loading ? 'block' : 'none', left: (this.state.windowWidth / 2) - 40, top: (this.state.windowHeight / 2) - 40 }} >
           <CircularProgress size={80} thickness={5} />
         </div>
-        <div className="Main" style = {{ height: this.state.windowHeight * 0.8, width: this.state.windowWidth < 1000 ? this.state.windowWidth * 0.8 : 600 }} >
+        <div className="Main" style = {{ height: this.state.windowHeight * 0.8, width: this.state.windowWidth < 1000 ? this.state.windowWidth * 0.8 : 600, maxWidth: 600 }} >
           <Tabs
             onChange={this.handleChange}
             value={this.state.slideIndex}
@@ -74,7 +75,7 @@ class Main extends React.Component {
             onChangeIndex={this.handleChange}
           >
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
-              Hi I'm Anthony
+              <Me />
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
               Front-end Developer
