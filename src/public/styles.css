@@ -33,6 +33,13 @@ body {
   text-align: center;
 }
 
+.Links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+}
+
 .Skills {
   display: flex;
   align-items: center;
