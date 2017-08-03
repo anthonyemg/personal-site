@@ -70,21 +70,22 @@ class Main extends React.Component {
           >
             <Tab value={0} icon={<Face />} />
             <Tab value={1} icon={<Work />} />
-            <Tab value={2} icon={<PhotoCamera />} />
+            {/* <Tab value={2} icon={<PhotoCamera />} /> */}
           </Tabs>
           <SwipeableViews
             index={this.state.slideIndex}
             onChangeIndex={this.handleChange}
           >
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
+              <div className="blur"></div>
               <Me />
             </div>
             <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
               <Skills />
             </div>
-            <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
+            {/* <div className="Tab" style={{ height: ((this.state.windowHeight/10) * 8) - 48 }}>
               <Photos windowWidth={this.state.windowWidth} />
-            </div>
+            </div> */}
           </SwipeableViews>
         </div>
       </div>
