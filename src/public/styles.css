@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #141414;
+  background-color: rgba(80,80,80,0.2);
   /*background-image: url("https://68.media.tumblr.com/2a025788deef65a6a75b699fa8fe642b/tumblr_onxji1yMZY1r4mh0bo1_500.gif");*/
   /*background-image: url("https://static.tumblr.com/7f2ec5752be37eb89ffd4e38ebc5403d/scg7vb5/zalosjbw3/tumblr_static_tumblr_static_bnjo0hdhm1kcw84k4sw84owo0_640.gif");*/
   /*background-image: url("http://gifimage.net/wp-content/uploads/2017/07/black-gif-16-1.gif");
@@ -119,4 +119,11 @@ body {
 
 .subtitleSpace {
   padding-right: 8px;
+}
+
+canvas {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
 }

@@ -12,6 +12,8 @@ import Me from './Me.jsx';
 import Skills from './Skills.jsx';
 import Photos from './Photos.jsx';
 
+import particleConfig from '../../../particlesjs-config.json';
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -51,6 +53,7 @@ class Main extends React.Component {
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleLoading()
+    particlesJS('particles', particleConfig);
   }
 
   componentWillUnmount() {
@@ -59,7 +62,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div >
+      <div id='particles' >
         <div className="Progress" style={{ display: this.state.loading ? 'block' : 'none', left: (this.state.windowWidth / 2) - 40, top: (this.state.windowHeight / 2) - 40 }} >
           <CircularProgress size={80} thickness={5} />
         </div>

@@ -13,6 +13,7 @@ import colorTheme from '../colorTheme.js'
 import Main from './Main.jsx';
 
 class App extends React.Component {
+
   render() {
     return (
       <MuiThemeProvider muiTheme={colorTheme}>
