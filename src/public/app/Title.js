@@ -58,30 +58,42 @@ class Title extends React.Component {
 
   render() {
     return(
-      <div className="titleContainer">
-        <span className="title">Anthony Greenheck</span>
-        <div className="subtitle">
-          <span
-             className="txt-rotate"
-             data-period="7000"
-             data-rotate='[ "Developer", "Simple", "Motorcyclist", "Photographer"]'>
-          </span>
-          <span className="subtitleSpace">,</span>
-          <span
-             className="txt-rotate"
-             data-period="6500"
-             data-rotate='[ "Coder", "Biker", "Traveler", "New Yorker"]'>
-          </span>
-          <span className="subtitleSpace">,</span>
-          <span
-             className="txt-rotate"
-             data-period="6000"
-             data-rotate='[ "Builder", "Creative", "Dog Lover", "Designer"]'>
-          </span>
+      <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }}>
+        <div className="title-container">
+          <div className="title">
+            <span>Anthony</span>
+            <span>Greenheck</span>
+          </div>
+          <div className="subtitle-container">
+            <div className="subtitle">
+              <span
+                 className="txt-rotate"
+                 data-period="7000"
+                 data-rotate='[ "Developer", "Simple", "Motorcyclist", "Photographer"]'>
+              </span>
+              <span className="subtitleSpace">,</span>
+              <span
+                 className="txt-rotate"
+                 data-period="6500"
+                 data-rotate='[ "Coder", "Biker", "Traveler", "New Yorker"]'>
+              </span>
+              <span className="subtitleSpace">,</span>
+              <span
+                 className="txt-rotate"
+                 data-period="6000"
+                 data-rotate='[ "Builder", "Creative", "Dog Lover", "Designer"]'>
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="Links">
+        <div className="links">
           <a href="https://github.com/anthonyemg" target="_blank"><img src="../assets/github.svg" /></a>
           <a href="https://www.linkedin.com/in/anthonygreenheck/" target="_blank"><img src="../assets/linkedin.svg" /></a>
+        </div>
+        {/* <a href="http://worldfm.io/" target="_blank" className="WorldFMTitle">WorldFM</a> */}
+        {/* <img src="https://i.imgur.com/lpSYKFJ.png" height="200"/> */}
+        <div className="projects-button">
+          PROJECTS
         </div>
       </div>
     )

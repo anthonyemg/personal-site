@@ -3,122 +3,69 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #030303;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  font-family: 'Play', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
-.Progress {
-  position: absolute;
-}
-
-.Main {
-  /*background-color: black;*/
-  position: relative;
-  top: -7px;
-}
-
-
-
-.Me {
+.landing {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 100%;
-  min-height: 400px;
-  width: 100%;
-  min-width: 200px;
-  text-align: center;
-  position: relative;
-  top: -50px;
-}
-
-.Links {
-  margin-top: 50px;
-  display: flex;
   justify-content: space-around;
-  width: 100%;
-}
-
-.Skills {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+  background-color: rgba(80,80,80,0.1)
 }
 
-.WorldFMTitle {
-  font-size: 40px;
-  text-decoration: none;
-  color: black;
-  margin-top: 40px;
-}
-
-.WorldFMTitle:hover {
-  color: #FFC107;
-}
-
-.WorldFM {
-  width: 75%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.Tab {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  opacity: 0%;
-}
-
-.blur {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(80,80,80,0.2);
-  /*background-image: url("https://68.media.tumblr.com/2a025788deef65a6a75b699fa8fe642b/tumblr_onxji1yMZY1r4mh0bo1_500.gif");*/
-  /*background-image: url("https://static.tumblr.com/7f2ec5752be37eb89ffd4e38ebc5403d/scg7vb5/zalosjbw3/tumblr_static_tumblr_static_bnjo0hdhm1kcw84k4sw84owo0_640.gif");*/
-  /*background-image: url("http://gifimage.net/wp-content/uploads/2017/07/black-gif-16-1.gif");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;*/
-  /*background-size: cover;*/
-}
-
-.titleContainer {
+.title-container {
   padding: 20px;
+  z-index: 10;
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 700;
-  color: #b3a577;
+  font-size: 70px;
+  color: red;
+  font-family: 'Bungee Inline', cursive;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
   font-weight: 700;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: white;
+  color: #00FF00;
+  width: 400px;
+  font-family: 'VT323', monospace;
 }
 
-.subtitleSpace {
-  padding-right: 8px;
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.projects-button {
+  color: white;
+  font-size: 28px;
+  font-family: 'Bungee Inline', cursive;
 }
 
 canvas {
@@ -126,4 +73,15 @@ canvas {
   left: 0px;
   position: absolute;
   z-index: -1;
+}
+
+@media screen and (max-width: 430px) {
+  .title {
+    font-size: 46px;
+  }
+  .subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+    width: 260px;
+  }
 }
