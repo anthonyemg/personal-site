@@ -1,27 +1,13 @@
 import React from 'react';
-import { Card, CardHeader } from 'material-ui/Card';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import CircularProgress from 'material-ui/CircularProgress';
-import {Tabs, Tab} from 'material-ui/Tabs';
-import SwipeableViews from 'react-swipeable-views';
-import Face from 'material-ui/svg-icons/action/face';
-import Work from 'material-ui/svg-icons/action/work';
-import PhotoCamera from 'material-ui/svg-icons/image/photo-camera';
+import Landing from './Landing';
+import particleConfig from '../../../../particlesjs-config.json';
 
-import Title from './Title';
-import particleConfig from '../../../particlesjs-config.json';
-
-
-class Main extends React.Component {
+class Container extends React.Component {
   constructor(props) {
-    injectTapEventPlugin();
     super(props);
     this.state = {
-      content: 'hello world..',
-      loading: true,
       windowHeight: window.innerHeight,
       windowWidth: window.innerWidth,
-      slideIndex: 0,
     };
     this.handleResize = this.handleResize.bind(this);
     this.handleLoading = this.handleLoading.bind(this);
@@ -60,7 +46,7 @@ class Main extends React.Component {
   render() {
     return (
       <div id='particles'>
-        <Title
+        <Landing
           windowHeight={this.state.windowHeight}
           widowWidth={this.state.windowWidth}
         />
@@ -69,4 +55,4 @@ class Main extends React.Component {
   }
 };
 
-export default Main;
+export default Container;

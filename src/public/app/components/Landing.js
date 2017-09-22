@@ -3,11 +3,11 @@ import ReactDom from 'react-dom';
 import Subtitle from './Subtitle';
 import WorldFM from './WorldFM';
 
-class Title extends React.Component {
-
+class Landing extends React.Component {
   render() {
+    console.log(this.props)
     return(
-      <div className="container" style = {{ maxHeight: this.props.windowHeight * 0.8, maxWidth: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }}>
+      <div className="container" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }}>
         <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }} >
           <div className="title-container">
             <div className="title">
@@ -30,4 +30,4 @@ class Title extends React.Component {
   }
 };
 
-export default Title;
+export default Landing;
