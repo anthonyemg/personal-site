@@ -19,6 +19,7 @@ class Container extends React.Component {
       windowHeight: window.innerHeight,
       windowWidth: window.innerWidth
     });
+    console.log('test', window.indderHeight)
   }
 
   handleLoading() {

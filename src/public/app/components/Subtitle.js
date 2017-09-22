@@ -23,7 +23,8 @@ TxtRotate.prototype.tick = function() {
   this.el.innerHTML = '<span className="wrap">' + this.txt + '</span>';
 
   var that = this;
-  var delta = 400 - Math.random() * 100;
+  //delta = type speed
+  var delta = 200 - Math.random() * 100;
 
   if (this.isDeleting) { delta /= 2; }
 
@@ -60,20 +61,20 @@ class Subtitle extends React.Component {
         <div className="subtitle">
           <span
              className="txt-rotate"
-             data-period="7000"
-             data-rotate='[ "Developer", "Simple", "Motorcyclist", "Photographer"]'>
+             data-period="3000"
+             data-rotate='[ "Developer", "Simple", "Motorcyclist", "Biker"]'>
           </span>
           <span className="subtitleSpace">,</span>
           <span
              className="txt-rotate"
-             data-period="6500"
-             data-rotate='[ "Coder", "Biker", "Traveler", "New Yorker"]'>
+             data-period="2000"
+             data-rotate='[ "Coder","Photographer", "Traveler", "New Yorker"]'>
           </span>
           <span className="subtitleSpace">,</span>
           <span
              className="txt-rotate"
-             data-period="6000"
-             data-rotate='[ "Builder", "Creative", "Dog Lover", "Designer"]'>
+             data-period="3200"
+             data-rotate='[ "Builder..", "Creative..", "Dog Lover..", "Designer.."]'>
           </span>
         </div>
       </div>

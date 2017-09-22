@@ -5,7 +5,6 @@ import WorldFM from './WorldFM';
 
 class Landing extends React.Component {
   render() {
-    console.log(this.props)
     return(
       <div className="container" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }}>
         <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }} >
