@@ -19,7 +19,6 @@ class Container extends React.Component {
       windowHeight: window.innerHeight,
       windowWidth: window.innerWidth
     });
-    console.log('test', window.indderHeight)
   }
 
   handleLoading() {
@@ -49,7 +48,7 @@ class Container extends React.Component {
       <div id='particles'>
         <Landing
           windowHeight={this.state.windowHeight}
-          widowWidth={this.state.windowWidth}
+          windowWidth={this.state.windowWidth}
         />
       </div>
     )

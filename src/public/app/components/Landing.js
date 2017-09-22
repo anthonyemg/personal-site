@@ -6,8 +6,8 @@ import WorldFM from './WorldFM';
 class Landing extends React.Component {
   render() {
     return(
-      <div className="container" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }}>
-        <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600, maxWidth: 600 }} >
+      <div className="container" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600  }}>
+        <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600 }} >
           <div className="title-container">
             <div className="title">
               <span>Anthony</span>
@@ -23,7 +23,7 @@ class Landing extends React.Component {
             <span>PROJECTS</span>
           </div>
         </div>
-        <WorldFM height={this.props.windowHeight * 0.8} width={this.props.windowWidth < 1000 ? this.props.windowWidth * 0.8 : 600}/>
+        <WorldFM height={this.props.windowHeight * 0.8} width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}/>
       </div>
     )
   }
