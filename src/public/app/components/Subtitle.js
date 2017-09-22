@@ -60,27 +60,27 @@ class Subtitle extends React.Component {
       <div className="subtitle-container">
         <div className="subtitle">
           <span
-             className="txt-rotate"
-             data-period="3000"
-             data-rotate='[ "Developer", "Simple", "Motorcyclist", "Biker"]'>
+            className="txt-rotate"
+            data-period="3000"
+            data-rotate='["Developer", "Simple", "Motorcyclist", "Biker"]'>
           </span>
           <span className="subtitleSpace">,</span>
           <span
-             className="txt-rotate"
-             data-period="2000"
-             data-rotate='[ "Coder","Photographer", "Traveler", "New Yorker"]'>
+            className="txt-rotate"
+            data-period="2000"
+            data-rotate='["Coder","Photographer", "Traveler", "New Yorker"]'>
           </span>
           <span className="subtitleSpace">,</span>
           <span
-             className="txt-rotate"
-             data-period="3200"
-             data-rotate='[ "Builder..", "Creative..", "Dog Lover..", "Designer.."]'>
+            className="txt-rotate"
+            data-period="3200"
+            data-rotate='["Builder..", "Creative..", "Dog Lover..", "Designer.."]'>
           </span>
         </div>
       </div>
     )
   }
+  
 }
-
 
 export default Subtitle;

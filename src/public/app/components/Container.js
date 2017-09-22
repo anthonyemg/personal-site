@@ -3,6 +3,7 @@ import Landing from './Landing';
 import particleConfig from '../../../../particlesjs-config.json';
 
 class Container extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +36,7 @@ class Container extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
-    this.handleLoading()
+    this.handleLoading();
     particlesJS('particles', particleConfig);
   }
 
@@ -53,6 +54,7 @@ class Container extends React.Component {
       </div>
     )
   }
+  
 };
 
 export default Container;

@@ -31,19 +31,21 @@ body {
 
 .title {
   font-size: 70px;
-  color: red;
+  color: #FF0000;
   font-family: 'Bungee Inline', cursive;
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: default;
 }
 
 .subtitle-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 .subtitle {
@@ -63,20 +65,26 @@ body {
 .links {
   display: flex;
   justify-content: space-around;
-  width: 200px;
+  width: 240px;
 }
 
-.links:hover {
-  color: #00FF00;
+.links-button {
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.links-button:hover {
+  transform: scale(1.2);
 }
 
 .projects-button {
-  color: white;
+  color: #FEFEFE;
   font-size: 28px;
   font-family: 'Bungee Inline', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .projects-button:hover {
@@ -89,12 +97,15 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-size: 30px;
+  color: #FEFEFE;
+  cursor: default;
 }
 
 .worldFM-title {
   font-size: 40px;
   font-family: 'Bungee Inline', cursive;
-  color: white;
+  color: #FF0000;
   text-decoration: none;
   padding-top: 40px;
 }
@@ -108,13 +119,25 @@ body {
   justify-content: space-around;
 }
 
+.worldFM-moreToCome {
+  font-size: 28px;
+}
+
+.icon {
+  cursor: pointer;
+  padding-bottom: 26px;
+}
+
+.icon:hover {
+  color: #00FF00;
+}
+
 canvas {
   top: 0px;
   left: 0px;
   position: absolute;
   z-index: -1;
 }
-
 
 @keyframes pulse {
   0% {
@@ -174,8 +197,7 @@ canvas {
   animation: pulse 3s linear infinite;
 }
 
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 420px) {
   .title {
     font-size: 46px;
   }
