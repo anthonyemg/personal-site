@@ -92,9 +92,11 @@ class Title extends React.Component {
         </div>
         {/* <a href="http://worldfm.io/" target="_blank" className="WorldFMTitle">WorldFM</a> */}
         {/* <img src="https://i.imgur.com/lpSYKFJ.png" height="200"/> */}
-        <div className="projects-button">
-          PROJECTS
+        <div className="projects-button faa-pulse animated">
+          <span>PROJECTS</span>
+          {/* <i className="icon fa fa-chevron-down faa-pulse animated" /> */}
         </div>
+        
       </div>
     )
   }

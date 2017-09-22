@@ -8,11 +8,7 @@ import Face from 'material-ui/svg-icons/action/face';
 import Work from 'material-ui/svg-icons/action/work';
 import PhotoCamera from 'material-ui/svg-icons/image/photo-camera';
 
-// import Me from './Me.jsx';
-// import Skills from './Skills.jsx';
-// import Photos from './Photos.jsx';
 import Title from './Title';
-
 import particleConfig from '../../../particlesjs-config.json';
 
 
@@ -68,7 +64,6 @@ class Main extends React.Component {
           windowHeight={this.state.windowHeight}
           widowWidth={this.state.windowWidth}
         />
-        {/* <Title style = {{ height: this.state.windowHeight * 0.8, width: this.state.windowWidth < 1000 ? this.state.windowWidth * 0.8 : 600, maxWidth: 600 }} /> */}
       </div>
     )
   }
