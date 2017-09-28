@@ -95,7 +95,7 @@ body {
   background-color: rgba(80,80,80,0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-size: 30px;
   color: #FEFEFE;
@@ -107,7 +107,7 @@ body {
   font-family: 'Bungee Inline', cursive;
   color: #FF0000;
   text-decoration: none;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .worldFM-title:hover {
@@ -121,6 +121,17 @@ body {
 
 .worldFM-moreToCome {
   font-size: 28px;
+}
+
+.imstagran {
+  background-color: rgba(80,80,80,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  color: #FEFEFE;
+  cursor: default;
 }
 
 .icon {
@@ -205,5 +216,9 @@ canvas {
     font-size: 20px;
     letter-spacing: 1px;
     width: 260px;
+  }
+  .worldFM-moreToCome {
+    font-size: 18px;
+    margin-bottom: -10px;
   }
 }

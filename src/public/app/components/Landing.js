@@ -2,6 +2,7 @@ import React from 'react';
 import SweetScroll from 'sweet-scroll';
 import Subtitle from './Subtitle';
 import WorldFM from './WorldFM';
+import Imstagran from './Imstagran';
 
 class Landing extends React.Component {
 
@@ -18,7 +19,10 @@ class Landing extends React.Component {
 
   render() {
     return(
-      <div id="container" className="container" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}}>
+      <div id="container"
+        className="container"
+        style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}}
+      >
         <div className="landing" style = {{ height: this.props.windowHeight * 0.8, width: this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}} >
           <div className="title-container">
             <div className="title">
@@ -35,7 +39,17 @@ class Landing extends React.Component {
             <span onClick={this.scrollDown}>PROJECTS</span>
           </div>
         </div>
-        <WorldFM height={this.props.windowHeight * 0.8} width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}/>
+
+        <WorldFM
+          height={this.props.windowHeight * 0.8}
+          width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}
+        />
+
+        <Imstagran
+          height={this.props.windowHeight * 0.8}
+          width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}
+        />
+
       </div>
     )
   }
