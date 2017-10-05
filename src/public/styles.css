@@ -10,6 +10,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'VT323', monospace;
+  margin: 0px;
+  overflow: hidden;
 }
 
 .container {
@@ -102,12 +104,40 @@ body {
   cursor: default;
 }
 
+.project-titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.project-titleContainer a {
+  text-decoration: none;
+}
+
+.project-githubLink {
+  color: white;
+}
+
+.project-githubLink:hover {
+  color: #00FF00;
+}
+
 .project-title {
   font-size: 40px;
   font-family: 'Bungee Inline', cursive;
-  color: #FF0000;
-  text-decoration: none;
+  color: #FF0000;;
   padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-githubLink {
+  font-size: 20px;
+}
+
+.project-githubLink {
+  font-size: 20px;
 }
 
 .project-title:hover {
