@@ -6,6 +6,7 @@ class Imstagran extends React.Component {
     super(props);
     this.state = {
       previousPage: 1,
+      nextPage: 3,
     }
   }
 
@@ -22,7 +23,10 @@ class Imstagran extends React.Component {
         <div className='project-images' style={{width: this.props.width * 0.8}}>
           <img src='../assets/imstagranMock.png' style={{height: this.props.width < 600 ? '46vw' : 280}}/>
         </div>
-        <i className='icon fa fa-chevron-up faa-pulse animated' onClick={() => this.props.scrollToPage(this.state.previousPage)} />
+        <div>
+          <i className='icon fa fa-chevron-up faa-pulse animated' onClick={() => this.props.scrollToPage(this.state.previousPage)}/>
+          <i className='icon fa fa-chevron-down faa-pulse animated' onClick={() => this.props.scrollToPage(this.state.nextPage)}/>
+        </div>
       </div>
     )
   }

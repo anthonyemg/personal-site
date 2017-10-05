@@ -3,6 +3,7 @@ import SweetScroll from 'sweet-scroll';
 import Subtitle from './Subtitle';
 import WorldFM from './WorldFM';
 import Imstagran from './Imstagran';
+import YuoTube from './YuoTube';
 
 class Landing extends React.Component {
 
@@ -50,6 +51,12 @@ class Landing extends React.Component {
         />
 
         <Imstagran
+          height={this.props.windowHeight * 0.8}
+          width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}
+          scrollToPage={this.scrollToPage}
+        />
+
+        <YuoTube
           height={this.props.windowHeight * 0.8}
           width={this.props.windowWidth < 800 ? this.props.windowWidth * 0.9 : 600}
           scrollToPage={this.scrollToPage}
