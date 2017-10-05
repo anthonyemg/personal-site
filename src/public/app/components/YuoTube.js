@@ -13,7 +13,15 @@ class YuoTube extends React.Component {
         className='project'
         style={{width: this.props.width, height: this.props.height}}
       >
-        <a href='https://yuotubeio.herokuapp.com/' target='_blank' className='project-title'>yuotube</a>
+        <div className='project-titleContainer'>
+          <a href='https://yuotubeio.herokuapp.com/' target='_blank' className='project-title'>YuoTube</a>
+          <a href='https://github.com/anthonyemg/yuotube' target='_blank'>
+            <div className='project-githubLink'>
+              <i className='fa fa-github fa-lg' style={{marginRight: 8}} />
+              <span>repo</span>
+            </div>
+          </a>
+        </div>
         <span style={{fontSize: 20, width: this.props.width * 0.7, paddingBottom: 20, textAlign: this.props.width < 560 ? 'left' : 'center'}}>
           A React YouTube clone simply made for fun.
         </span>

@@ -16,7 +16,15 @@ class Imstagran extends React.Component {
         className='project'
         style={{width: this.props.width, height: this.props.height}}
       >
-        <a href='http://imstagran.io/' target='_blank' className='project-title'>imstagran</a>
+        <div className='project-titleContainer'>
+          <a href='http://imstagran.io/' target='_blank' className='project-title'>Imstagran</a>
+          <a href='https://github.com/anthonyemg/Imstagran' target='_blank'>
+            <div className='project-githubLink'>
+              <i className='fa fa-github fa-lg' style={{marginRight: 8}} />
+              <span>repo</span>
+            </div>
+          </a>
+        </div>
         <span style={{fontSize: 20, width: this.props.width * 0.7, paddingBottom: 20, textAlign: this.props.width < 560 ? 'left' : 'center'}}>
           A React instagram clone simply made for fun.
         </span>
